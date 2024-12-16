@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio |Tushar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">Tushar</div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>Hello! I'm Tushar, a full stack developer with a passion for building dynamic and responsive web applications. With expertise in both front-end and back-end technologies, I have the unique ability to bring a comprehensive perspective to every project I work on.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <img src="https://assets.onecompiler.app/4335m9nje/4335fjj6a/download.jpeg" alt="Project 1">
+                <div class="project-info">
+                    <h3>Project 1</h3>
+                    <p>Short description of your project.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="https://assets.onecompiler.app/4335m9nje/4335mbp4h/download%20(2).jpeg" alt="Project 2">
+                <div class="project-info">
+                    <h3>Project 2</h3>
+                    <p>Short description of your project.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="https://assets.onecompiler.app/4335m9nje/4335mbp4h/download%20(3).jpeg" alt="Project 3">
+                <div class="project-info">
+                    <h3>Project 3</h3>
+                    <p>Short description of your project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card"><i class="fab fa-html5"></i> HTML</div>
+            <div class="skill-card"><i class="fab fa-css3-alt"></i> CSS</div>
+            <div class="skill-card"><i class="fab fa-js-square"></i> JavaScript</div>
+            <div class="skill-card"><i class="fab fa-python"></i> Python</div>
+            <div class="skill-card"><i class="fab fa-react"></i> React.js</div>
+            <div class="skill-card"><i class="fab fa-node-js"></i> Node.js</div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
+        <div class="contact-info">
+            <p>Email: <span id="email-link" style="color: #4db8ff; cursor: pointer;">tusharshrivas7999@gmail.com</span></p>
+            <p>Phone: <a href="tel:+916266540051">+91 6266540051</a></p>
+            <p>LinkedIn: <span id="linkedin-link" style="color: #4db8ff; cursor: pointer;">www.linkedin.com/in/túshár-shrívás-78727a310</span></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Tushar. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // JavaScript for Contact Links Interaction
+        document.addEventListener('DOMContentLoaded', function() {
+            const emailLink = document.getElementById('email-link');
+            const linkedinLink = document.getElementById('linkedin-link');
+
+            // Email link interaction
+            emailLink.addEventListener('click', function(event) {
+                event.preventDefault();  // Prevent the default action
+
+                const email = "tusharshrivas7999@gmail.com";
+                const confirmEmail = confirm('Are you sure you want to email me?');
+                
+                if (confirmEmail) {
+                    window.location.href = `mailto:${email}`;
+                }
+            });
+
+            // LinkedIn link interaction
+            linkedinLink.addEventListener('click', function(event) {
+                event.preventDefault();  // Prevent the default action
+
+                const linkedinUrl = "https://www.linkedin.com/in/t%C3%BAsh%C3%A1r-shr%C3%ADv%C3%A1s-78727a310/";
+                const confirmLinkedIn = confirm('Are you sure you want to visit my LinkedIn profile?');
+
+                if (confirmLinkedIn) {
+                    window.open(linkedinUrl, '_blank');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
